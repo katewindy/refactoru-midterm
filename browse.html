@@ -5,7 +5,9 @@
   <title>VGTrackr - Browse Games</title>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css">
+
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
@@ -31,13 +33,24 @@
 </nav>
 
 <div class="container-fluid">
-	
+	<div class="tableholder">
+        <table id="datatable" class="row-border hover compact order-column nowraps">
+            <thead>
+              <tr>
+                <th>Game Title</th>
+                <th>Console</th><th>Genre</th><th>Loose Price</th><th>CIB Price</th></tr>
+            </thead>
+            <tbody class="tablebody">
+          </tbody>
+        </table>
+      </div>
 </div>
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-
+  <!-- include datatables -->
+  <script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 	<script src="data.js"></script>
 	<script src="main.js"></script>
 

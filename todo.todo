@@ -3,5 +3,26 @@ Phase 1:
  ☐ Create framework for main page
  ☐ Create design for Collection Page
  ☐ Create design for Stats page
+ ☐ Create design for Browse page
+ ☐ Create design for individual game pages
  ☐ Fix dataPrettier() (in data.js)  FUCK THIS SERIOUSLY
- ☐ 
+ Phase 2:
+ ☐ Integrate DataTables for collection and browse pages
+ ☐ use Raty.js to rate games
+ ☐ Look into charts plugin
+   ☐ What stats?
+     ☐ Genre pie chart
+     ☐ Finished/Played/Not Started
+     ☐ Average Price
+     ☐ Amount Amount Paid
+     ☐ Ratings average (by Series, by Genre)
+Phase 3: 
+  ☐ Migrate to database
+  ☐ Integrate Pricecharting API
+  ☐ Create User Profiles
+  ☐ Create "WTF Should I Play spinner" - takes games in collection marked as unplayed, and gives you a random game to play
+  ☐ Allow sharing (or keeping private) of collections
+  ☐ Create trade lists (ability to move collection items to it, also ability to create a want list)
+  ☐ Add ability to export collection to PDF or CSV.
+  ☐ Create messaging system between users
+  ☐ Create forum?
