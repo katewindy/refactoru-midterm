@@ -1,0 +1,13 @@
+body {
+	padding-top:70px;
+
+}
+
+.jumbotron {
+	background: url('img/tetris.jpg');
+	background-size: contain;
+}
+
+.jumbotron h1, .jumbotron p {
+	color: #808080;
+}
