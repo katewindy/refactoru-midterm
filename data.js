@@ -40160,7 +40160,7 @@ function dataPrettier() {
                         ],
                         ["Super Nintendo",
                             "3 Ninjas Kick Back",
-                            "17.47s",
+                            "17.47",
                             "575.00",
                             "Action & Adventure"
                         ],
