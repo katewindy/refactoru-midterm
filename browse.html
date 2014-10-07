@@ -45,15 +45,39 @@
         </table>
       </div>
 </div>
-
+<!-- Easter Egg! -->
+<div class="container">
+<div class="modal fade" id="easteregg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">w00t!  You remembered the Konami Code!</h4>
+      </div>
+      <div class="modal-body">
+    <p class="modaltext">Yay for you!  Please enjoy this gif of an adorable kitty feeding someone to a woodchipper, because why the hell not.</p>
+    <img src="img/fargoed.gif">
+    <p class="modaltext">Shouldn't you be adding things to your collection?  You know, before we send the kitty to find you?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   <!-- include datatables -->
   <script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
   <script src="lib/sweet-alert.min.js"></script>
-	<script src="data.js"></script>
+  <script src="lib/konami.js"></script>
+  <script src="data.js"></script>
+	<script src="browse.js"></script>
 	<script src="main.js"></script>
+
+
 
 </body>
 </html>

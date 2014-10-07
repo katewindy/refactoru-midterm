@@ -1,14 +1,14 @@
 Phase 1:
 
- ☐ Create framework for main page
+ ✔ Create framework for main page @done (14-10-07 14:36)
  ☐ Create design for Collection Page
  ☐ Create design for Stats page
  ☐ Create design for Browse page
- ☐ Create design for individual game pages
- ☐ Fix dataPrettier() (in data.js)  FUCK THIS SERIOUSLY
+ ☐ Put Konami code easter egg on homepage
+ ✔ Fix dataPrettier() (in data.js)  FUCK THIS SERIOUSLY @done (14-10-07 14:37)
  Phase 2:
- ☐ Integrate DataTables for collection and browse pages
- ☐ use Raty.js to rate games
+ ✔ Integrate DataTables for collection and browse pages @done (14-10-07 14:37)
+ 
  ☐ Look into charts plugin
    ☐ What stats?
      ☐ Genre pie chart
@@ -26,3 +26,5 @@ Phase 3:
   ☐ Add ability to export collection to PDF or CSV.
   ☐ Create messaging system between users
   ☐ Create forum?
+  ☐ Create design for individual game pages
+  ☐ use Raty.js to rate games

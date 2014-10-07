@@ -33,7 +33,7 @@
 	<div class="jumbotron">
 		<h1>Got Games?</h1>
 		<p>Drowning in your backlog?  Can't remember if you've already got something?  Want to know how much your collection is worth?  We've got you covered.</p>
-		<p><a href="#" class="btn btn-primary btn-lg" role="button">Manage Your Collection</a></p>
+		<p><a href="collection.html" class="btn btn-primary btn-lg" role="button">Manage Your Collection</a></p>
 	</div>
 </div>
 <div class="container-fluid">
@@ -44,7 +44,7 @@
 	      <div class="caption">
 	        <h3>Keep track of your games</h3>
 	        <p>Easily add new and classic games to your collection.  </p>
-	        <p><a href="#" class="btn btn-default" role="button">Add Games</a></p>
+	        <p><a href="browse.html" class="btn btn-default" role="button">Add Games</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -70,10 +70,31 @@
 	  </div>
 	</div>
 </div>
-
+<!-- Easter Egg! -->
+<div class="container">
+<div class="modal fade" id="easteregg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">w00t!  You remembered the Konami Code!</h4>
+      </div>
+      <div class="modal-body">
+ 		<p class="modaltext">Yay for you!  Please enjoy this fabulous video.</p>
+ 		<iframe width="420" height="315" src="http://www.youtube.com/embed/9W-VGUOiVDc?rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+ 		<p class="modaltext">Seriously though, Don Hertzfeldt is mega awesome and you should definitely watch more of his stuff.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="lib/sweet-alert.min.js"></script>
+	<script src="lib/konami.js"></script>
 	<script src="main.js"></script>
 
 </body>
