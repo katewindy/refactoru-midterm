@@ -16,6 +16,15 @@ $(document).on('ready', function() {
 	$(document).on('click', '.gametitle', function(){
 		var myCollection = createCollectionArray();
 		var collectionItem = $(this).text();
+		console.log(collectionItem);
+		var itemConsole = $(this)
+			.closest('td')
+			.nextAll('.consolename')
+			.text();
+		console.log(itemConsole);
+		var row = $(this)
+			.closest('tr');
+		console.log(row);
 		swal({
 			title: 'Delete' + collectionItem + '?',
 			text: 'Delete this game from your collection?',
@@ -24,11 +33,15 @@ $(document).on('ready', function() {
 			confirmButtonText: 'Get rid of it!'
 		});
 		$(document).on('click', '.confirm', function (){
-			console.log($(this));
-			// for (var i = 0; i < myCollection.length; i++);
-			// 	if (myCollection.productname === collectionItem){
-					
-			// 	}
+			console.log(myCollection);
+			for (var i = 0; i < myCollection.length; i++){
+				console.log(myCollection[i]);
+				if (myCollection[i].productname === collectionItem && myCollection[i].consolename === itemConsole){
+					row.remove();
+					myCollection.splice(i, 1);
+					localStorage.setItem('myCollection', JSON.stringify(myCollection));
+				}
+			};
 		});
 			
 		
@@ -38,12 +51,3 @@ $(document).on('ready', function() {
 
 
 
-function createCollectionArray(){
-	var myCollection = JSON.parse(localStorage.getItem('myCollection'));
-	console.log(myCollection);
-	if (myCollection === null){
-	 	myCollection = [];
-	 	console.log('initialized new collection: ' + myCollection);
-	};
-	return myCollection;
-}

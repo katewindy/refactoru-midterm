@@ -57,12 +57,12 @@ $(document).on('ready', function() {
 
 
 
-function createCollectionArray(){
-	var myCollection = JSON.parse(localStorage.getItem('myCollection'));
-	console.log(myCollection);
-	if (myCollection === null){
-	 	myCollection = [];
-	 	console.log('initialized new collection: ' + myCollection);
-	};
-	return myCollection;
-}
+// function createCollectionArray(){
+// 	var myCollection = JSON.parse(localStorage.getItem('myCollection'));
+// 	console.log(myCollection);
+// 	if (myCollection === null){
+// 	 	myCollection = [];
+// 	 	console.log('initialized new collection: ' + myCollection);
+// 	};
+// 	return myCollection;
+// }
