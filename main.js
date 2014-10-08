@@ -25,8 +25,11 @@ function createBrowseTableRows (dataArray) {
 		var gameName = currentRow.productname;
 		var consoleName = currentRow.consolename;
 		var genre = currentRow.genre;
-		var loose = Number(currentRow.looseprice);
-		var cib = Number(currentRow.cibprice);
+		var numloose = Number(currentRow.looseprice);
+		var loose = numloose.toFixed(2);
+		var numcib = Number(currentRow.cibprice);
+		var cib = numcib.toFixed(2);
+
 		var newrow = '<tr><td><a href=# class="gametitle" id="' + i + '">'+gameName+'</a></td><td class="consolename">'+consoleName+'</td><td class=genre>'+genre+'</td><td class="loose">$'+loose+'</td><td class="cib">$'+cib+'</td></tr>';
 
 		$('.tablebody').append(newrow);
