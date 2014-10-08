@@ -1,3 +1,5 @@
+
+
 $(document).on('ready', function() {
 	//  run the data stored in data.js and make it into one huge array
   	var tableData = dataPrettier();

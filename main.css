@@ -1,9 +1,10 @@
 body {
-	padding-top:70px;
+	padding-top:50px;
+	background: #FFFEFF;
 
 }
 
-.jumbotron {
+.jumbotron, .headercont {
 	background: url('img/tetris.jpg');
 	background-size: contain;
 }
@@ -11,3 +12,73 @@ body {
 .jumbotron h1, .jumbotron p {
 	color: #808080;
 }
+
+#loader{
+	position:fixed;
+	top:0;
+	width:100%;
+	background:#FFFEFF;
+	height:100%;
+	text-align:center;
+	margin:0;
+	padding:0;
+	padding-top: 200px;
+	overflow:hidden;
+	z-index: 5;
+}
+
+input {
+	border-radius: 5px;
+}
+
+.page-header {
+	border: none;
+}
+
+.page-header h1{
+	color: #E8E8EE;
+}
+/*bit of a cheaty padding thing*/
+.padding20px {
+	height: 20px;
+}
+
+/*styling for the line through section titles*/
+.titlestrike {
+	height: 1px;
+	background: #777F7F;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+/*styling for said section titles*/
+.title {
+	color: #777F7F;
+	font-weight: normal;
+	background: #FFFEFF;
+	position: relative;
+	top: -0.65em;
+	left: 20px;
+	display: inline;
+	padding: 0px 10px;
+}
+
+.stattext {
+	text-align: center;
+	border: 1px dashed #777F7F;
+	margin: 10px;
+	border-radius: 7px;
+	box-shadow: 3px 3px 3px #e0e0e0;
+	background: #D3D3D3;
+}
+
+.graphtastic {
+	padding:20px;
+}
+
+.graphtext {
+	text-align: center;
+	vertical-align: middle;
+}
+
+

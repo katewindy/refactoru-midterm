@@ -1,3 +1,11 @@
+$(window).load(function() {
+    $("#loader").delay(1000).animate({
+        opacity:0,
+        width: 0,
+        height:0
+    }, 500);
+});
+
 $(document).on('ready', function() {
 	// create lots of konami code easter eggs into pretty much all the pages
 	var easter_egg = new Konami(function() {

@@ -12,6 +12,10 @@
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<!-- loading bar -->
+<div id="loader">
+    <img src="img/download.gif" width="40%">
+</div>  
 <!-- top navigation bar -->
  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- nav container -->
@@ -29,12 +33,19 @@
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="browse.html">Browse</a></li>
-        <li><a href="#">Statistics</a></li>
+        <li><a href="stats.html">Statistics</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <!-- end nav container -->
+<!-- Page header -->
+<div class="container-fluid headercont">
+  <div class="page-header">
+  <br><h1>My Collection <small>Click the name of the game to remove it from your collection.</small></h1><br><br><br>
+</div>
+</div>
+<div class="padding20px"></div>
 <!-- begin datatable container -->
 <div class="container-fluid">
 	<div class="tableholder">
@@ -49,6 +60,7 @@
         </table>
       </div>
 </div>
+<div class="padding20px"></div>
 <!-- Easter Egg! -->
 <div class="container">
 <div class="modal fade" id="easteregg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<!-- Navigation bar -->
  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -29,11 +30,103 @@
     </div>
   </div>
 </nav>
-
+<!-- Page header -->
+<div class="container-fluid headercont">
+  <div class="page-header">
+  <br><h1>Your Collection Statistics
+  <small>We've graphed things for you.  You're welcome.</small><br><br><br>
+  </h1>
+</div>
+</div>
+<div class="padding20px"></div>
 <div class="container-fluid">
-	
+	<div class="row">
+   <div class="col-xs-12">
+      <div class="titlestrike">
+        <h3 class="title">Basic Stats</h3>
+      </div>
+   </div> 
+   <div class="row">
+      <div class="col-xs-12">
+      <div class="col-sm-3 col-xs-6">
+        <div class="stattext">
+          <h4>Total Games <br>Owned </h4>
+          <h1 class="totalgames">123456</h1>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="stattext">
+          <h4>Total Value <br>(Loose)</h4>
+          <h1 class="looseval">$23456</h1>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="stattext">
+          <h4>Total Value <br>(CIB)</h4>
+          <h1 class="cibval">$23456</h1>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="stattext">
+          <h4>Average Value <br>(Loose)</h4>
+          <h1 class="looseavgval">$25.00</h1>
+        </div>
+      </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <div class="stattext">
+          <h4>Most Common Genre</h4>
+          <h2 class="commongenre">Puzzle</h2>
+        </div>
+      </div>
 
+      <div class="col-sm-6 col-xs-12">
+        <div class="stattext">
+          <h4>Most Common Console</h4>
+          <h2 class="commonconsole">Playstation 2</h2>
+        </div>
+      </div>
+   </div>
+  </div>
+  <div class="padding20px">
+    
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="titlestrike">
+        <h3 class="title">Neato Charts!</h3>
+      </div>
+    </div> 
+  </div>
+  <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <div class="graphtext">
+          <h3>Consoles</h3>
+        </div>
+      </div>
 
+      <div class="col-sm-6 col-xs-12">
+        <div class="graphtastic">
+          <img class="piechart" src="img/pieChart.jpg" alt="">
+        </div>
+      </div>
+   </div>
+  </div>
+  <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <div class="graphtastic">
+          <img class="piechart" src="img/pieChart.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-6 col-xs-12 graphtext">
+        <div class="graphtext">
+          <h3>Genres</h3>
+        </div>
+      </div>      
+   </div>
+  </div>
 </div>
 <!-- Easter Egg! -->
 <div class="container">
@@ -57,8 +150,11 @@
 </div>
 </div>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/konami.js"></script>
+  <script src="lib/chart.min.js"></script>
+  <script src="stats.js"></script>
 	<script src="main.js"></script>
 
 </body>
