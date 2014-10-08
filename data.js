@@ -1,6 +1,8 @@
+// this function zips this massive pile of data into something I can actually use in this application.  This will be replaced in the release version by an actual database!!!  WHOOOOOO HOOOO.
 function dataPrettier() {
         // this makes an array comprised of the values of the cols: and data: values of the below ridiculousness
         var cols = _.values({
+                // these are the keys that will be in the finished array of objects
                 "cols": [
                     "consolename",
                     "productname",
@@ -8,10 +10,8 @@ function dataPrettier() {
                     "cibprice",
                     "genre",
                 ],
+                // these are the values to be assigned to the keys.  There are a LOT of them.  I'm really sorry this shit takes forever to load, but we haven't learned back end shit yet.
                 "data": [
-                    
-                    
-                    
                     ["Gamecube",
                         "16MB 251 Block Memory Card",
                         "13.91",
@@ -52787,6 +52787,6 @@ function dataPrettier() {
                     _.object(keys, listOfGames[i])
                 );
             }
-
+            // return the processed array
             return processedData;
         }
