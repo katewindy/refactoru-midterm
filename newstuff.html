@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VGTrackr - Upcoming Features</title>
+  <!-- load shitloads of style sheets -->
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<!-- top navigation bar -->
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- nav container -->
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">VGTrackr</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="collection.html">My Collection</a></li>
+        <li><a href="stats.html">Statistics</a></li>
+        <li><a href="WTFmachine.html">WTF Should You Play?</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end nav container -->
+<!-- Page header -->
+<div class="container-fluid headercont">
+  <div class="page-header">
+  <br><h1>Upcoming Features <small>All the features coming soon to VGTrackr.  Most of them, anyway.</small></h1><br><br><br>
+</div>
+</div>
+<!-- begin page body content container -->
+<div class="col-sm-12">
+  <div class="about">
+    <h1>About VGTrackr</h1>
+    <p>VGTrackr is a project by Kate Windheuser-Rodriguez, made as a midterm project for the Fall 2014 Web Development cohort at RefactorU in lovely, though somewhat crunchy, Boulder, Colorado.</p>
+    <p>At the moment, VGTrackr is a completely client side application.  All data about games is hardcoded into a data.js file (yes, all 8000+ games currently represented are hardcoded because I apparently enjoy debugging 60k lines of code...yay).</p>  
+    <p>Currenly price data is static and is not being updated because there's no real database/backend; however, it was current as of Monday, October 6th, 2014.</p>
+    <h1>Upcoming Features</h1>
+    <p>As this will also be my final project for RefactorU, there are many upcoming features that are planned for implementation.</p>
+    <h3>Database!</h3>
+    <p>Yup, that will make this work MUCH FASTER.  Also, right now if you clear your browser cache, you'll clear your collection, and if you switch browsers you won't be able to access it either since it's saved in localMemory. Getting a database set up will mean your collection will be saved and accessible from anywhere.</p>
+    <h3>Pricecharting API Integration</h3>
+    <p>Once the database is incorporated, I'll be pulling game and price data from <a href="http://http://videogames.pricecharting.com/">Pricecharting.com</a>'s API.  Pricecharting is the single best place for current market data for video games all the way back to early consoles like the Magnavox Odyssey.  This will allow regular updating of price data.</p>
+    <h3>User Profiles</h3>
+    <p>Once I introduce the backend functionality, users will be required to sign up to use the site, probably using login with Google or login with Facebook.  You'll be able to edit your profile, which will be displayed to other users.</p>
+    <p>You will be able to choose whether your profile links to a public version of your collection or not.</p>
+    <h3>Individual Game Pages</h3>
+    <p>Clicking on the name of a game in the browse page or in your collection will take you to a page for that specific game, where you'll have the ability to rate the game, add it to your collection or wantlist, and leave reviews of your opinion of the game.  The add game and delete game functions will get their own buttons next to each game in the browse and collection pages.</p>
+    <h3>More Collection Features</h3>
+    <p>Upon adding a game to your collection, you'll be able to look it up and rate the game from 1 to 5 stars.  You will also be able to indicate whether your game is complete in box (CIB) or loose(something is missing) and get the appropriate price data, instead of having both prices for each game.  Finally, you'll be able to choose whether each game has been played, completed, or you haven't started it.</p>
+    <h3>Trade Lists</h3>
+    <p>From your collection screen, you'll have the ability to add games to a list of games you'd like to trade for different games.   Games added to your trade list will appear on your profile so other users can see them and potentially contact you to set up a trade.  Please note that any trades conducted through this site will be at your own risk.  We will be keeping track of user trades, and bad traders will be banned, but we can't promise everyone is going to be a saint.</p>
+    <h3>Want Lists</h3>
+    <p>While browsing games, you'll have the opportunity to add games to your want list.  This will also be displayed on your profile, so users wishing to trade with you will know what you want in return!</p>
+    <h3>Follow Friends</h3>
+    <p>If you have friends that use VGTrackr or just want to keep track of that guy who's got all the best stuff in his tradelist, you can follow other users.  Users you follow will not be required to follow you back.</p>
+    <h3>Export to PDF or CSV</h3>
+    <p>Need a copy of your collection for some reason?  Maybe your insurance agent wants a list of everything so they can insure your collection.  You'll be able to export your collection to a PDF or CSV formatted file, making it easy for you to take your data with you or share it with someone who isn't a user of this site.</p>
+    <h3>Interact!</h3>
+    <p>A messaging system will be introduced, so you can communicate with other users.  Forums may also be introduced, but not probably for awhile.</p>
+    <h3>Extra Stuff</h3>
+    <p>I'm also planning on integrating a feed of video game news articles from various sources, as well as creating a "WTF Should I Play" machine, which, given a genre, will give you back a random game in your collection you haven't played.</p>
+    <h1>Contact Kate</h1>
+    <p>Find a major bug?  If it's happening in anything other than the latest Chrome browser, I really don't care at the moment.  Upgrade your browser to <a href="https://www.google.com/chrome/browser/">Chrome</a>, foo.</p>
+    <p>
+    If you're still using IE, feel free to visualize me looking at you with the utmost distain. 
+    </p>
+    <p>Email: <a href="mailto:roboticbrain@gmail.com">roboticbrain@gmail.com</a><br>
+    Github: <a href="https://github.com/katewindy">katewindy</a>
+    </p>
+    <p></p>
+  </div>
+</div>
+
+<!-- Easter Egg! -->
+<div class="container">
+<div class="modal fade" id="easteregg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">w00t!  You remembered the Konami Code!</h4>
+      </div>
+      <div class="modal-body">
+    <p class="modaltext">Yay for you!</p>
+    <p class="modaltext">I'm getting a little tired of thinking of things that are funny to put in these, so you get this thing, what haunted my nightmares as a child, courtesy of Scary Stories to Tell in the Dark.</p>
+    <img src="img/scary.jpg" alt="">
+    <p class="modaltext">If you've never seen this thing before, you clearly were not a small child in the late 80's or early 90's.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  <!-- Here all the scripts be -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- include datatables -->
+  <script src="lib/konami.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>

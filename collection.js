@@ -34,7 +34,7 @@ $(document).on('ready', function() {
 		console.log(row);
 		// create popup to confirm deletion of game
 		swal({
-			title: 'Delete' + collectionItem + '?',
+			title: 'Delete ' + collectionItem + '?',
 			text: 'Delete this game from your collection?',
 			type: 'warning',
 			showCancelButton: true,

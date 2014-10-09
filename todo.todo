@@ -1,19 +1,19 @@
 Phase 1:
 
  ✔ Create framework for main page @done (14-10-07 14:36)
- ☐ Create design for Collection Page
- ☐ Create design for Stats page
- ☐ Create design for Browse page
- ☐ Put Konami code easter egg on homepage
+ ✔ Create design for Collection Page @done (14-10-09 11:19)
+ ✔ Create design for Stats page @done (14-10-09 11:19)
+ ✔ Create design for Browse page @done (14-10-09 11:19)
+ ✔ Put Konami code easter egg on homepage @done (14-10-09 11:19)
  ✔ Fix dataPrettier() (in data.js)  FUCK THIS SERIOUSLY @done (14-10-07 14:37)
  Phase 2:
  ✔ Integrate DataTables for collection and browse pages @done (14-10-07 14:37)
  
- ☐ Look into charts plugin
+ ✔ Look into charts plugin @done (14-10-09 11:19)
    ☐ What stats?
-     ☐ Genre pie chart
+     ✔ Genre pie chart @done (14-10-09 11:19)
      ☐ Finished/Played/Not Started
-     ☐ Average Price
+     ✔ Average Price @done (14-10-09 11:19)
      ☐ Amount Amount Paid
      ☐ Ratings average (by Series, by Genre)
 Phase 3: 

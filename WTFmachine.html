@@ -2,21 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>VGTrackr - Browse Games</title>
-  <!-- look mom!  it's an asinine amount of style sheets! -->
+  <title>VGTrackr - Upcoming Features</title>
+  <!-- load shitloads of style sheets -->
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
-  <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-<!-- loading bar -->
-<div id="loader">
-    <img src="img/download.gif" width="40%">
-</div>  
-<!-- navigation bar -->
+<!-- top navigation bar -->
  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- nav container -->
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -30,38 +25,41 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
         <li><a href="collection.html">My Collection</a></li>
         <li><a href="stats.html">Statistics</a></li>
         <li><a href="newstuff.html">Upcoming Features</a></li>
-        <li><a href="WTFmachine.html">WTF Should You Play?</a></li>
       </ul>
     </div>
   </div>
 </nav>
+<!-- end nav container -->
 <!-- Page header -->
 <div class="container-fluid headercont">
   <div class="page-header">
-  <br><h1>Browse All Games 
-  <small>Click the name of the game to add it to your collection.</small><br><br><br>
-  </h1>
+  <br><h1>WTF Should You Play? <small>Get a random game to play from your collection.</small></h1><br><br><br>
 </div>
 </div>
-<div class="padding20px"></div>
-<!-- holder for table of games -->
+<!-- begin page body content container -->
 <div class="container-fluid">
-	<div class="tableholder">
-        <table id="datatable" class="row-border hover compact order-column nowraps">
-            <thead>
-              <tr>
-                <th>Game Title</th>
-                <th>Console</th><th>Genre</th><th>Loose Price</th><th>CIB Price</th></tr>
-            </thead>
-            <tbody class="tablebody">
-          </tbody>
-        </table>
+  <div class="col-xs-12">
+    <h2>Pick a Genre</h2>
+    <div class="buttonholder">
+      <!-- buttons go here -->
+    </div>
+    <div class="slotimg col-md-6 col-sm-12">
+      <div class="stattext">
+        <img id="slotimg" src="img/slots.gif" alt="">
       </div>
+    </div>
+    <div class="result col-md-6 col-sm-12" style="text-align:center">
+      <div class="stattext" style="height: 312px">
+        <h3>You should totally play:</h3><h1 class="answer"></h1>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="padding20px"></div>
+    
 <!-- Easter Egg! -->
 <div class="container">
 <div class="modal fade" id="easteregg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -72,9 +70,10 @@
         <h4 class="modal-title" id="myModalLabel">w00t!  You remembered the Konami Code!</h4>
       </div>
       <div class="modal-body">
-    <p class="modaltext">Yay for you!  Please enjoy this gif of an adorable kitty feeding someone to a woodchipper, because why the hell not.</p>
-    <img src="img/fargoed.gif">
-    <p class="modaltext">Shouldn't you be adding things to your collection?  You know, before we send the kitty to find you?</p>
+    <p class="modaltext">Yay for you!</p>
+    <p class="modaltext">I'm getting a little tired of thinking of things that are funny to put in these, so you get this thing, what haunted my nightmares as a child, courtesy of Scary Stories to Tell in the Dark.</p>
+    <img src="img/scary.jpg" alt="">
+    <p class="modaltext">If you've never seen this thing before, you clearly were not a small child in the late 80's or early 90's.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -83,19 +82,14 @@
   </div>
 </div>
 </div>
-<!-- OH GOD SO MANY FREAKING SCRIPTS -->
+  <!-- Here all the scripts be -->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   <!-- include datatables -->
-  <script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-  <script src="lib/sweet-alert.min.js"></script>
   <script src="lib/konami.js"></script>
-  <script src="data.js"></script>
-	<script src="browse.js"></script>
+  <script src="WTFmachine.js"></script>
 	<script src="main.js"></script>
-
-
 
 </body>
 </html>
