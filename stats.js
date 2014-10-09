@@ -29,9 +29,16 @@ $(document).on('ready', function() {
 		$('.commongenre').text(commongenre);
 		var commonconsole = commonConsole(tableData);
 		$('.commonconsole').text(commonconsole);
-	};	
+	}	
 	
+	//draw some fucking charts
+	var genreChartData = genreDataFormatter(tableData);
+	var consoleChartData = consoleDataFormatter(tableData);
+	var ctx = document.getElementById('consoleChart').getContext('2d');
+	var myConsoleChart = new Chart(ctx).Pie(consoleChartData);
 	
+	var ctx = document.getElementById('genreChart').getContext('2d');
+	var myGenreChart = new Chart(ctx).Pie(genreChartData);
 });
 
 function ttlValLoose (tableData) {
@@ -67,10 +74,10 @@ function avgLooseVal (tableData) {
 
 function commonGenre (tableData) {
 	var collectionData = tableData;
-	var consoleNameArray = []
+	var consoleNameArray = [];
 	for (var i = 0; i < collectionData.length; i++){
 		consoleNameArray.push(collectionData[i].genre);
-	};
+	}
 	
 	collectionData = consoleNameArray;
 	var commongenre = mode(collectionData);
@@ -79,10 +86,10 @@ function commonGenre (tableData) {
 
 function commonConsole (tableData) {
 	var collectionData = tableData;
-	var consoleNameArray = []
+	var consoleNameArray = [];
 	for (var i = 0; i < collectionData.length; i++){
 		consoleNameArray.push(collectionData[i].consolename);
-	};
+	}
 	
 	collectionData = consoleNameArray;
 	var commonconsole = mode(collectionData);
@@ -92,14 +99,14 @@ function commonConsole (tableData) {
 
 function mode(array)
 {
-    if(array.length == 0)
+    if (array.length === 0)
     	return null;
     var modeMap = {};
     var maxEl = array[0], maxCount = 1;
     for(var i = 0; i < array.length; i++)
     {
     	var el = array[i];
-    	if(modeMap[el] == null)
+    	if(modeMap[el] === null)
     		modeMap[el] = 1;
     	else
     		modeMap[el]++;	
@@ -117,25 +124,81 @@ var ChartDataConstructor = function (value, color, highlight, label){
 	this.color = color;
 	this.highlight = highlight;
 	this.label = label;
-}
+};
 
-function chartDataFormatter (tableData) {
+
+function genreDataFormatter (tableData) {
 	var collectionData = tableData;
 	var genrearray = [];
+	var counts = {};
+	var chartData = [];
+
 	for (var i = 0; i < collectionData.length; i++){
 		genrearray.push(collectionData[i].genre);
 	}
-	console.log(genrearray);
+	
+	genrearray = _.uniq(genrearray);
+	for (var i = 0; i < collectionData.length; i++){
+		var num = collectionData[i].genre;
+		counts[num] = counts[num] ? counts[num]+1 : 1;
+	}
+	console.log(counts);
+	var chartcolor = chartColors(genrearray.length);
 
-	var numGenres = _.uniq(genrearray);
-	console.log(numGenres.length);
-
+	for (var i = 0; i< genrearray.length; i++){
+		var value = genrearray[i];
+		var thisObject = new ChartDataConstructor(counts[value], chartcolor[i], chartcolor[i], genrearray[i]);
+		chartData.push(thisObject);
+		console.log(thisObject);
+	}
+	console.log(chartData);
+	return chartData;
 }
 
+function consoleDataFormatter (tableData) {
+	var collectionData = tableData;
+	var consolearray = [];
+	var counts = {};
+	var chartData = [];
 
+	for (var i = 0; i < collectionData.length; i++){
+		consolearray.push(collectionData[i].consolename);
+	}
+	
+	consolearray = _.uniq(consolearray);
+	for (var i = 0; i < collectionData.length; i++){
+		var num = collectionData[i].consolename;
+		counts[num] = counts[num] ? counts[num]+1 : 1;
+	}
+	console.log(counts);
+	var chartcolor = chartColors(consolearray.length);
 
+	for (var i = 0; i< consolearray.length; i++){
+		var value = consolearray[i];
+		var thisObject = new ChartDataConstructor(counts[value], chartcolor[i], chartcolor[i], consolearray[i]);
+		chartData.push(thisObject);
+		console.log(thisObject);
+	}
+	console.log(chartData);
+	return chartData;
+}
 
+function chartColors (length) {
+	var arrayLength = length;
+	var colorArray = ['#FF0000', '#009999', '#FF7400', '#00CC00', '#9B0000', '#005D5D', '#9B4600', '#007C00', '#FF601D', '#FFA01D', '#1E6DAF', '#15B776', '#E41a5E', '#FF571D', '#15BB6B', '#7FE81A', '#FFD71D', '#7C1DB4', '#FFFE1D', '#4828B9', '#2457B3', '#DB1971'];
+	var myColors = colorArray.slice(0, length);
+	return myColors;
+}
 
+// function genres () {
+// 	var genres = ["Other", "Action & Adventure", "Puzzle", "Strategy", "Fighting", "Racing", "RPG", "FPS", "Extreme Sports", "Accessories", "Sports", "Basketball", "Football", "Baseball", "Party"];
+// 	return genres;
+// }
+
+// function consoles() {
+// 	var consoles = ["Sega Dreamcast", "Playstation", "Playstation 2", "Playstation 3", "NES", "Super Nintendo", "Nintendo 64", "Gamecube", "Wii"];
+// 	return consoles;
+// }
 
 
 
