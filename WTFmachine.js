@@ -1,8 +1,13 @@
 $(document).on('ready', function(){
 	var tableData = JSON.parse(localStorage.getItem('myCollection'));
-	var availableGenres = getGenres(tableData);
-	makeButtons(availableGenres);
-
+	
+	if (tableData === null) {
+		$('.buttonholder').append('<p>Looks like you don\'t have any games in your collection yet.  Why don\'t you go <a href="browse.html">add a few</a>, then try this again?')
+	}
+	else{
+		var availableGenres = getGenres(tableData);
+		makeButtons(availableGenres);
+	}
 	$(document).on('click', '.btn-info', function(){
 		var genreSelection = $(this).text();
 		var randomGame = getRandomGame(genreSelection, tableData);

@@ -132,26 +132,32 @@ function genreDataFormatter (tableData) {
 	var genrearray = [];
 	var counts = {};
 	var chartData = [];
-
-	for (var i = 0; i < collectionData.length; i++){
-		genrearray.push(collectionData[i].genre);
+	console.log(collectionData);
+	if (collectionData===null) {
+		var nodata = new ChartDataConstructor('1', '#FF0000', '#FF0000', 'None');
+		chartData.push(nodata);
 	}
+	else {
+		for (var i = 0; i < collectionData.length; i++){
+			genrearray.push(collectionData[i].genre);
+			}
+		genrearray = _.uniq(genrearray);
+		for (var i = 0; i < collectionData.length; i++){
+			var num = collectionData[i].genre;
+			counts[num] = counts[num] ? counts[num]+1 : 1;
+		}
+		console.log(counts);
 	
-	genrearray = _.uniq(genrearray);
-	for (var i = 0; i < collectionData.length; i++){
-		var num = collectionData[i].genre;
-		counts[num] = counts[num] ? counts[num]+1 : 1;
-	}
-	console.log(counts);
-	var chartcolor = chartColors(genrearray.length);
+		var chartcolor = chartColors(genrearray.length);
 
-	for (var i = 0; i< genrearray.length; i++){
-		var value = genrearray[i];
-		var thisObject = new ChartDataConstructor(counts[value], chartcolor[i], chartcolor[i], genrearray[i]);
-		chartData.push(thisObject);
-		console.log(thisObject);
-	}
-	console.log(chartData);
+		for (var i = 0; i< genrearray.length; i++){
+			var value = genrearray[i];
+			var thisObject = new ChartDataConstructor(counts[value], chartcolor[i], chartcolor[i], genrearray[i]);
+			chartData.push(thisObject);
+			console.log(thisObject);
+		}
+		console.log(chartData);
+	}	
 	return chartData;
 }
 
@@ -160,25 +166,30 @@ function consoleDataFormatter (tableData) {
 	var consolearray = [];
 	var counts = {};
 	var chartData = [];
+	if (collectionData===null) {
+		var nodata = new ChartDataConstructor('1', '#FF0000', '#FF0000', 'None');
+		chartData.push(nodata);
+	}
+	else {
+		for (var i = 0; i < collectionData.length; i++){
+			consolearray.push(collectionData[i].consolename);
+		}
+		
+		consolearray = _.uniq(consolearray);
+		for (var i = 0; i < collectionData.length; i++){
+			var num = collectionData[i].consolename;
+			counts[num] = counts[num] ? counts[num]+1 : 1;
+		}
+		console.log(counts);
+		var chartcolor = chartColors(consolearray.length);
 
-	for (var i = 0; i < collectionData.length; i++){
-		consolearray.push(collectionData[i].consolename);
-	}
-	
-	consolearray = _.uniq(consolearray);
-	for (var i = 0; i < collectionData.length; i++){
-		var num = collectionData[i].consolename;
-		counts[num] = counts[num] ? counts[num]+1 : 1;
-	}
-	console.log(counts);
-	var chartcolor = chartColors(consolearray.length);
-
-	for (var i = 0; i< consolearray.length; i++){
-		var value = consolearray[i];
-		var thisObject = new ChartDataConstructor(counts[value], chartcolor[i], chartcolor[i], consolearray[i]);
-		chartData.push(thisObject);
-		console.log(thisObject);
-	}
+		for (var i = 0; i< consolearray.length; i++){
+			var value = consolearray[i];
+			var thisObject = new ChartDataConstructor(counts[value], chartcolor[i], chartcolor[i], consolearray[i]);
+			chartData.push(thisObject);
+			console.log(thisObject);
+		}
+	}	
 	console.log(chartData);
 	return chartData;
 }

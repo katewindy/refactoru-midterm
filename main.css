@@ -103,3 +103,11 @@ canvas {
     margin-right: auto;
     display: block;
 }
+
+
+
+.question .answer {
+	position:relative;
+  	top:50%;
+  	transform: translateY(-50%);
+}
